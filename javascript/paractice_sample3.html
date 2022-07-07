@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script>
+          function fn1(){
+            // console.log("ds");
+             var val = document.getElementById("select").value;
+
+             var arr1 = ["html","css","js","angular","jquery","ajax"];
+             var tx = "";
+
+             var arr2 = ["java","python","dotnet","c#","c++","php"];
+             var tx2 = "";
+
+
+             if(val == "frontend")
+             {
+                for(var i=0;i<arr1.length;i++)
+                   {
+                      tx = tx + arr1[i]+"</br>";
+                      document.getElementById("h1").innerHTML = "frontend";
+                      res.innerHTML=tx;
+                   }
+             }
+             else if(val == "backend")
+             {
+                console.log("ho");
+                for(var j=0;j<arr2.length;j++)
+                   {
+                      tx2 = tx2 + arr2[j]+"</br>";
+                      document.getElementById("h1").innerHTML = "backend";
+                      res.innerHTML=tx2;
+                   }
+             }
+
+
+          }
+    </script>
+  </head>
+  <body>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="mt-4">
+                <p> <em>Select option :</em>
+                    <select id="select" onchange="fn1()" >
+                        <option value="">select</option>
+                        <option value="frontend">frontend</option>
+                        <option value="backend">backend</option>
+                    </select>
+                </p>
+            </div>
+            <div class="mt-4">
+                <!-- <p id="res"></p> -->
+                <h5 style="color: red;" id="h1"></h5>
+                <p id="res"></p> 
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

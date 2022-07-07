@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        var prom = new Promise((Resolve, Reject)=>{
+        setTimeout(()=>{
+        Resolve("Resolved");
+    },2000)    
+   })
+   prom.then(data=>{
+    document.getElementById("loader").style.display ='none';
+    document.getElementById("image1").style.display ='inline-block';
+      }).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    // document.getElementById("msg").innerHTML = "Error " + err;
+   });
+
+
+   var prom2 = new Promise((Resolve, Reject)=>{
+        setTimeout(()=>{
+        Resolve("Resolved");
+    },4000)    
+   })
+   prom2.then(data=>{
+    document.getElementById("image2").style.display ='inline-block';
+      }).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    // document.getElementById("msg").innerHTML = "Error " + err;
+   });
+
+
+   var prom3 = new Promise((Resolve, Reject)=>{
+        setTimeout(()=>{
+        Resolve("Resolved");
+    },6000)    
+   })
+   prom3.then(data=>{
+    document.getElementById("image3").style.display ='inline-block';
+      }).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    // document.getElementById("msg").innerHTML = "Error " + err;
+   });
+
+
+   var prom4 = new Promise((Resolve, Reject)=>{
+        setTimeout(()=>{
+        Resolve("Resolved");
+    },8000)    
+   })
+   prom4.then(data=>{
+    document.getElementById("hrline").style.display = 'block';
+    document.getElementById("image4").style.display ='inline-block';
+      }).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    // document.getElementById("msg").innerHTML = "Error " + err;
+   });
+
+
+   var prom5 = new Promise((Resolve, Reject)=>{
+        setTimeout(()=>{
+        Resolve("Resolved");
+    },10000)    
+   })
+   prom5.then(data=>{
+    document.getElementById("image5").style.display ='inline-block';
+      }).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    // document.getElementById("msg").innerHTML = "Error " + err;
+   });
+
+
+   var prom6 = new Promise((Resolve, Reject)=>{
+        setTimeout(()=>{
+        Resolve("Resolved");
+    },12000)    
+   })
+   prom6.then(data=>{
+    document.getElementById("image6").style.display ='inline-block';
+      }).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    // document.getElementById("msg").innerHTML = "Error " + err;
+   });
+
+
+
+    </script>
+  </head>
+  <body class="container">
+    <img id="loader" src="./img/spinner.gif" alt="" width="10%">
+    <div class="row" class="">
+        <div class="col"><img id="image1" src="./img/imgcard1.jpg" alt="image1" width="80%" style="display:none;"></div>
+        <div class="col"><img id="image2" src="./img/imgcard2.jpg" alt="image2" width="80%" style="display:none;"></div>
+        <div class="col"><img id="image3" src="./img/imgcard3.jpg" alt="image3" width="80%" style="display:none;"></div>
+    </div>
+    <div>
+      <hr style="display: none;" id="hrline">
+    </div>
+    <div class="row">
+        <div class="col"><img id="image4" src="./img/imgcard4.jpg" alt="image4" width="80%" style="display:none;"></div>
+        <div class="col"><img id="image5" src="./img/imgcard5.jpg" alt="image5" width="80%" style="display:none;"></div>
+        <div class="col"><img id="image6" src="./img/imgcard6.jpg" alt="image6" width="80%" style="display:none;"></div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

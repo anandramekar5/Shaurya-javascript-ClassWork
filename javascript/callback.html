@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script>
+        
+
+        function fn1()
+        {
+            var totalDays = 30;
+            var availabileDays;
+            var inp = document.getElementById("inputAttendance").value;
+
+            availabileDays = totalDays - inp;
+            document.getElementById("msg1").innerHTML = "you were present for " + inp + " days, and you have to attend for " + availabileDays + " days more."; 
+        }
+
+
+        
+        function fn2()            
+        {
+            var leavesTaken = document.getElementById("leave").value;
+            var totalLeavesAvailable = 8;
+            var leavasAvailableAfter = totalLeavesAvailable - leavesTaken;
+            document.getElementById("msg2").innerHTML = "you have " + leavasAvailableAfter + " leaves                 available.";
+        }
+    </script>
+  </head>
+  <body>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+           <div class="mt-4 form-group">
+            <label for="inputAttendance">how many days employee was present :</label>
+            <input type="number" class="form-control mt-2" id="inputAttendance">
+            <button class="mt-4 btn btn-sm btn-primary" onclick="fn1()">check availability</button>
+            <h6 id="msg1" class="mt-4"></h6>
+
+
+            <label for="leavesTaken" class="mt-4">leaves taken :</label>
+            <input type="number" class="form-control mt-2" id="leave">
+            <button class="mt-4 btn btn-sm btn-primary" onclick="fn2()">check leave availability</button>
+            <h6 id="msg2" class="mt-4"></h6>
+           </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
